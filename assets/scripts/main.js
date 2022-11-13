@@ -58,8 +58,7 @@ function initializeServiceWorker() {
       // B4. TODO - Once the service worker has been successfully registered, console
       //            log that it was successful.
       if (registration.active) {
-        console.log("Service worker successful");
-        alert("Service worker success");
+        console.log("Service worker registration successful");
       };
       
     } catch (error) {
@@ -87,7 +86,6 @@ async function getRecipes() {
   //            If there are recipes, return them.
   /**************************/
   if (localStorage.getItem("recipes") == null) {
-    alert('empty');
   
   // The rest of this method will be concerned with requesting the recipes
   // from the network
@@ -98,7 +96,6 @@ async function getRecipes() {
   //            function (we call these callback functions). That function will
   //            take two parameters - resolve, and reject. These are functions
   //            you can call to either resolve the Promise or Reject it.
-    alert("test");
     return new Promise(async (resolve, reject) => {
 
   /**************************/
